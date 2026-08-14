@@ -1,0 +1,514 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#0B5D78;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD166;
+}
+
+/* Mobile Button */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    height:90vh;
+    background:url("images/hero.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,.55);
+    color:white;
+    padding:50px;
+    border-radius:15px;
+    max-width:700px;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#FFD166;
+    color:#222;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffb703;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   PAGE BANNER
+========================== */
+
+.page-banner{
+    background:#0B5D78;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.page-banner h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.page-banner p{
+    font-size:18px;
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+.section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
+}
+
+.section h2{
+    text-align:center;
+    color:#0B5D78;
+    margin-bottom:25px;
+    font-size:36px;
+}
+
+.section p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2,
+
+.card h3{
+    padding:20px;
+    color:#0B5D78;
+}
+
+.card p{
+    padding:0 20px 20px;
+}
+
+.card a{
+    display:inline-block;
+    margin:0 20px 20px;
+    color:#0B5D78;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    color:#ff7b00;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+table th{
+    background:#0B5D78;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f3f3f3;
+}
+
+table tr:hover{
+    background:#eaf7ff;
+}
+
+/* ==========================
+   AUDIO
+========================== */
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    background:white;
+}
+
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* ==========================
+   VIDEO
+========================== */
+
+.video-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:40px auto;
+}
+
+.video-container video{
+    width:350px;      /* Portrait width */
+    max-width:90%;
+    height:620px;     /* Portrait height */
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   QUICK LINKS
+========================== */
+
+.links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:25px;
+}
+
+.links a{
+    text-decoration:none;
+    color:white;
+    background:#0B5D78;
+    padding:12px 25px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.links a:hover{
+    background:#FFD166;
+    color:#222;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#0B5D78;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* ==========================
+   IMAGE EFFECTS
+========================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.card img,
+
+.gallery img{
+    transition:transform .4s ease;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   FADE ANIMATION
+========================== */
+
+.fade{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+    .overlay h1{
+        font-size:42px;
+    }
+
+    .overlay p{
+        font-size:18px;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        padding:15px 5%;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0B5D78;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        padding:20px 0;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        margin:10px 0;
+    }
+
+    .hero{
+        height:75vh;
+    }
+
+    .overlay{
+        padding:30px;
+    }
+
+    .overlay h1{
+        font-size:34px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+
+    .page-banner h1{
+        font-size:34px;
+    }
+
+    .section h2{
+        font-size:28px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+}
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    .overlay h1{
+        font-size:28px;
+    }
+
+    .btn{
+        padding:12px 24px;
+    }
+
+    .section{
+        width:95%;
+    }
+
+}
+
+/* ==========================
+   SMOOTH HOVER
+========================== */
+
+.card,
+.gallery-item,
+.links a,
+.btn{
+    transition:all .3s ease;
+}
+
+/* ==========================
+   CUSTOM SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eeeeee;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0B5D78;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#08475d;
+}
+}
